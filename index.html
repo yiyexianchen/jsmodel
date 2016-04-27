@@ -47,42 +47,42 @@
 </code></pre>
 
 <p>延时提示框<br>
-样式 
+样式  style<br>
+div {float:left; margin:10px;}</p>
 
-div {float:left; margin:10px;}&lt;/p&gt;
+<h1>
+<a id="div1-width50px-height50px-backgroundred" class="anchor" href="#div1-width50px-height50px-backgroundred" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>div1 {width:50px; height:50px; background:red;}</h1>
 
-&lt;h1&gt;div1 {width:50px; height:50px; background:red;}&lt;/h1&gt;
+<h1>
+<a id="div2-width250px-height180px-backgroundccc-displaynone" class="anchor" href="#div2-width250px-height180px-backgroundccc-displaynone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>div2 {width:250px; height:180px; background:#CCC; display:none;}</h1>
 
-&lt;h1&gt;div2 {width:250px; height:180px; background:#CCC; display:none;}&lt;/h1&gt;
-
-&lt;p&gt;js代码
+<p>js代码<br>
 window.onload=function ()
 {
-    var oDiv1=document.getElementById(&amp;#39;div1&amp;#39;);
-    var oDiv2=document.getElementById(&amp;#39;div2&amp;#39;);
-    var timer=null;&lt;/p&gt;
+    var oDiv1=document.getElementById('div1');
+    var oDiv2=document.getElementById('div2');
+    var timer=null;</p>
 
-&lt;pre&gt;&lt;code&gt;oDiv2.onmouseover=oDiv1.onmouseover=function ()
+<pre><code>oDiv2.onmouseover=oDiv1.onmouseover=function ()
 {
     clearTimeout(timer);
-    oDiv2.style.display=&amp;#39;block&amp;#39;;
+    oDiv2.style.display='block';
 };
 oDiv2.onmouseout=oDiv1.onmouseout=function ()
 {
     timer=setTimeout(function (){
-        oDiv2.style.display=&amp;#39;none&amp;#39;;
+        oDiv2.style.display='none';
     }, 500);
 };
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;};
-&lt;/script&gt;&lt;/p&gt;
+<p>};</p>
 
-&lt;p&gt;页面body 两个div  &lt;/p&gt;
+<p>页面body 两个div  </p>
 
-&lt;div id="div1"&gt;&lt;/div&gt;
+<div id="div1"></div>
 
-&lt;div id="div2"&gt;&lt;/div&gt;</p>
+<div id="div2"></div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/yiyexianchen/jsmodel">Jsmodel</a> is maintained by <a href="https://github.com/yiyexianchen">yiyexianchen</a>.</span>
