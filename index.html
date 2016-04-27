@@ -48,23 +48,38 @@
 
 <p>延时提示框   </p>
 
-
-div {float:left; margin:10px;}
-#div1 {width:50px; height:50px; background:red;}
-#div2 {width:250px; height:180px; background:#CCC; display:none;}
-
-
-
-
-<p></p>
-
-<p></p>
-
-<div id="div1"></div>
-
-<div id="div2"></div>
-
-<p></p>
+<ul>
+<li>
+<li>div {float:left; margin:10px;}</li>
+<li>#div1 {width:50px; height:50px; background:red;}</li>
+<li>#div2 {width:250px; height:180px; background:#CCC; display:none;}</li>
+<li>
+<li>
+<li>window.onload=function ()</li>
+<li>{</li>
+<li>  var oDiv1=document.getElementById('div1');</li>
+<li>  var oDiv2=document.getElementById('div2');</li>
+<li>  var timer=null;</li>
+<li><br></li>
+<li>  oDiv2.onmouseover=oDiv1.onmouseover=function ()</li>
+<li>  {</li>
+<li>      clearTimeout(timer);</li>
+<li>      oDiv2.style.display='block';</li>
+<li>  };</li>
+<li>  oDiv2.onmouseout=oDiv1.onmouseout=function ()</li>
+<li>  {</li>
+<li>      timer=setTimeout(function (){</li>
+<li>          oDiv2.style.display='none';</li>
+<li>      }, 500);</li>
+<li>  };</li>
+<li>};</li>
+<li>
+<li><p></p></li>
+<li><p></p></li>
+<li><div id="div1"></div></li>
+<li><div id="div2"></div></li>
+<li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/yiyexianchen/jsmodel">Jsmodel</a> is maintained by <a href="https://github.com/yiyexianchen">yiyexianchen</a>.</span>
