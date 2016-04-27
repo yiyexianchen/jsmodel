@@ -47,30 +47,42 @@
 </code></pre>
 
 <p>延时提示框<br>
-&lt;!DOCTYPE HTML&gt;
+样式 
 
-</p>
+div {float:left; margin:10px;}&lt;/p&gt;
 
-无标题文档
+&lt;h1&gt;div1 {width:50px; height:50px; background:red;}&lt;/h1&gt;
 
+&lt;h1&gt;div2 {width:250px; height:180px; background:#CCC; display:none;}&lt;/h1&gt;
 
-div {float:left; margin:10px;}
-#div1 {width:50px; height:50px; background:red;}
-#div2 {width:250px; height:180px; background:#CCC; display:none;}
+&lt;p&gt;js代码
+window.onload=function ()
+{
+    var oDiv1=document.getElementById(&amp;#39;div1&amp;#39;);
+    var oDiv2=document.getElementById(&amp;#39;div2&amp;#39;);
+    var timer=null;&lt;/p&gt;
 
+&lt;pre&gt;&lt;code&gt;oDiv2.onmouseover=oDiv1.onmouseover=function ()
+{
+    clearTimeout(timer);
+    oDiv2.style.display=&amp;#39;block&amp;#39;;
+};
+oDiv2.onmouseout=oDiv1.onmouseout=function ()
+{
+    timer=setTimeout(function (){
+        oDiv2.style.display=&amp;#39;none&amp;#39;;
+    }, 500);
+};
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;};
+&lt;/script&gt;&lt;/p&gt;
 
+&lt;p&gt;页面body 两个div  &lt;/p&gt;
 
-<p></p>
+&lt;div id="div1"&gt;&lt;/div&gt;
 
-<p></p>
-
-<div id="div1"></div>
-
-<div id="div2"></div>
-
-<p>
-</p>
+&lt;div id="div2"&gt;&lt;/div&gt;</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/yiyexianchen/jsmodel">Jsmodel</a> is maintained by <a href="https://github.com/yiyexianchen">yiyexianchen</a>.</span>
