@@ -19,28 +19,31 @@
     </section>
 
     <section class="main-content">
-      <p><code>$("#userData tr").live({</code>
-                <code>mouseover: function () {</code>
-                    <code>$(this).find(".floatbutton").css("display","block");</code>
-                <code>},</code>
-                <code>mouseout: function () {</code>
-                    <code>$(this).find(".floatbutton").css("display","none");</code>
-                <code>}</code>
-            <code>});</code></p>
+      <p>鼠标滑过table行显示图标<br>
+                            $("#userData tr").live({
+                                mouseover: function () {
+                                    $(this).find(".floatbutton").css("display","block");
+                                },
+                                mouseout: function () {
+                                    $(this).find(".floatbutton").css("display","none");
+                                }
+                            }); </p>
 
-<pre><code>        `$('#depmap').click(function(e){`
-            `$(".row.dep").css("display","none");`
-            `$("#depmap").addClass("active");`
-            `$("#deptree").removeClass("active");`
-            `$(".row.staff").css("display","block");`
-        `});`
+<p>点击两个按钮切换div             </p>
 
-        `$('#deptree').click(function(e){`
-            `$(".row.dep").css("display","block");`
-            `$("#depmap").removeClass("active");`
-            `$("#deptree").addClass("active");`
-            `$(".row.staff").css("display","none");`
-        `});`
+<pre><code>                        $('#depmap').click(function(e){
+                            $(".row.dep").css("display","none");
+                            $("#depmap").addClass("active");
+                            $("#deptree").removeClass("active");
+                            $(".row.staff").css("display","block");
+                        });
+
+                        $('#deptree').click(function(e){
+                            $(".row.dep").css("display","block");
+                            $("#depmap").removeClass("active");
+                            $("#deptree").addClass("active");
+                            $(".row.staff").css("display","none");
+                        });
 </code></pre>
 
       <footer class="site-footer">
